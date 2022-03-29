@@ -6,3 +6,7 @@ jellyfish
 networkx
 numpy
 click
+nltk
+spacy
+scikit-learn
+sentence-transformers 

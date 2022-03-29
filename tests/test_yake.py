@@ -124,9 +124,9 @@ def test_n1_EL():
 
     assert textHighlighted == "<kw>Ανώτατος</kw> <kw>διοικητής</kw> του <kw>ρωσικού</kw> <kw>στρατού</kw> <kw>φέρεται</kw> να <kw>σκοτώθηκε</kw> <kw>κοντά</kw> στο <kw>Χάρκοβο</kw>, <kw>σύμφωνα</kw> με την <kw>υπηρεσία</kw> <kw>πληροφοριών</kw> του <kw>υπουργείου</kw> <kw>Άμυνας</kw> της <kw>Ουκρανίας</kw>. <kw>Σύμφωνα</kw> με δήλωση του <kw>υπουργείου</kw> <kw>Άμυνας</kw> της <kw>Ουκρανίας</kw>, πρόκειται για τον <kw>Vitaly</kw> <kw>Gerasimov</kw>, υποστράτηγο και υποδιοικητή από την <kw>Κεντρική</kw> <kw>Στρατιωτική</kw> <kw>Περιφέρεια</kw> της <kw>Ρωσίας</kw>."
 
-test_phraseless_example()
-test_null_and_blank_example()
-test_n1_EN()
-test_n3_EN()
-test_n3_PT()
-test_n1_EL()
+# test_phraseless_example()
+# test_null_and_blank_example()
+# test_n1_EN()
+# test_n3_EN()
+# test_n3_PT()
+# test_n1_EL() 

@@ -44,7 +44,10 @@ requirements = [
     "numpy",
     "segtok",
     "networkx",
-    "jellyfish"]
+    "jellyfish",
+    "nltk",
+    "spacy",
+    "sentence-transformers"]
 
 setup_requirements = [
     'pytest-runner'    
@@ -62,7 +65,7 @@ setup(
     long_description=readme,
     long_description_content_type='text/markdown',    
     url='https://pypi.python.org/pypi/yake',
-    packages=find_packages(include=['yake','StopwordsList']),
+    packages=find_packages(include=['yake','StopWordsList']),
     entry_points={
         'console_scripts': [
             'yake=yake.cli:keywords'
@@ -73,7 +76,7 @@ setup(
     install_requires=requirements,
     zip_safe=False,
     keywords='yake',
-classifiers=[
+    classifiers=[
         'Development Status :: 3 - Alpha',
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         'Programming Language :: Python :: 3',
@@ -90,3 +93,5 @@ classifiers=[
     tests_require=test_requirements,
     setup_requires=setup_requirements,
 )
+
+# print(find_packages(include=['yake']))
