@@ -1,0 +1,6 @@
+.eggs 
+build
+tests 
+yake.egg-info
+yake/__pycache__/
+dist
