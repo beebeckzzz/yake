@@ -7,6 +7,6 @@ networkx
 numpy
 click
 nltk
-spacy
+spacy==3.2.3
 scikit-learn
 sentence-transformers 
