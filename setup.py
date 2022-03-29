@@ -46,7 +46,7 @@ requirements = [
     "networkx",
     "jellyfish",
     "nltk",
-    "spacy",
+    "spacy==3.2.3",
     "sentence-transformers"]
 
 setup_requirements = [
