@@ -19,7 +19,7 @@ nltk.data.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), 
 
 class KeywordExtractor(object):
 
-    def __init__(self, lan="en", n=3, dedupLim=0.9, dedupFunc='seqm', windowsSize=1, top=20, features=None, stopwords=None):
+    def __init__(self, lan="en", n=3, dedupLim=0.9, dedupFunc='seqm', windowsSize=1, top=20, filtered_n=5, features=None, stopwords=None):
         self.lan = lan
 
         dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -45,6 +45,7 @@ class KeywordExtractor(object):
 
         self.n = n
         self.top = top
+        self.filtered_n = filtered_n
         self.dedupLim = dedupLim
         self.features = features
         self.windowsSize = windowsSize
@@ -121,7 +122,7 @@ class KeywordExtractor(object):
             text_embeddings = self.model.encode(text)
             keyword_embeddings = [self.model.encode(keyword[0]) for keyword in keywords]
             cosine_scores = [cosine_similarity(i.reshape(1, -1), text_embeddings.reshape(1, -1)).item() for i in keyword_embeddings]
-            top_keyword_indices = np.array(cosine_scores).argsort(axis=0)[:5]
+            top_keyword_indices = np.array(cosine_scores).argsort(axis=0)[:self.filtered_n]
             top_keywords = np.array([o[0] for o in keywords])[top_keyword_indices.tolist()].tolist()
             return top_keywords
 
